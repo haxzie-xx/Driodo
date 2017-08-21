@@ -1,17 +1,12 @@
 package me.haxzie.driodo.Activities;
 
-import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDialog;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 
 import com.google.firebase.FirebaseException;
 import com.google.firebase.FirebaseTooManyRequestsException;
@@ -22,12 +17,17 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import java.util.concurrent.TimeUnit;
 
 import es.dmoral.toasty.Toasty;
+import me.haxzie.driodo.Fragments.MobileNumberRequestFragment;
 import me.haxzie.driodo.R;
 
 public class MobileVerifActivity extends AppCompatActivity {
 
     String TAG = "driodo";
     AppCompatDialog compatDialog;
+    FragmentManager fragmentManager;
+    Fragment fragment;
+    Class fragmentClass;
+
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
@@ -89,6 +89,20 @@ public class MobileVerifActivity extends AppCompatActivity {
         compatDialog.setContentView(R.layout.progress_dialog);
         compatDialog.getWindow().setBackgroundDrawable(null);
         compatDialog.setCancelable(false);
+
+        //Setting the default fragment to view in user home
+        fragment = new Fragment();
+        fragmentClass = MobileNumberRequestFragment.class;
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        fragmentManager.beginTransaction().replace(R.id.content, fragment).commit();
 
     }
 

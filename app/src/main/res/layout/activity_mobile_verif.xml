@@ -5,5 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="me.haxzie.driodo.Activities.MobileVerifActivity">
-    <include layout="@layout/content_mobile_verif" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"></FrameLayout>
+
 </android.support.design.widget.CoordinatorLayout>

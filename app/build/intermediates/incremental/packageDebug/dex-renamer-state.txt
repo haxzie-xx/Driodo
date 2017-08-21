@@ -1,4 +1,4 @@
-#Mon Aug 21 20:37:44 IST 2017
+#Mon Aug 21 21:17:45 IST 2017
 base.0=F\:\\project\\Driado\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_0786c71da3024434f3d315e710a4f4938eb993da
 renamed.1=classes.dex
 renamed.0=classes2.dex

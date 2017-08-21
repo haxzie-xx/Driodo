@@ -1,4 +1,4 @@
-package me.haxzie.driodo.Activities;
+package me.haxzie.driodo.Fragments;
 
 
 import android.content.Context;
@@ -24,12 +24,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+
+import me.haxzie.driodo.Activities.MobileVerifActivity;
 import me.haxzie.driodo.R;
 
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MobileVerifActivityFragment extends Fragment {
+public class MobileNumberRequestFragment extends Fragment {
 
     LinearLayout btnVerify;
     EditText etMobile;
@@ -42,7 +44,7 @@ public class MobileVerifActivityFragment extends Fragment {
     String TAG = "driodo";
 
 
-    public MobileVerifActivityFragment() {
+    public MobileNumberRequestFragment() {
     }
 
     @Override

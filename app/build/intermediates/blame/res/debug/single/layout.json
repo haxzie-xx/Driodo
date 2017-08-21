@@ -64,6 +64,10 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\51fb6253f7dee9f5b3b17c4f96c084f03a4dd39a\\output\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
+        "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_mobile_verify_code.xml",
+        "source": "F:\\project\\Driado\\app\\src\\main\\res\\layout\\fragment_mobile_verify_code.xml"
+    },
+    {
         "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\51fb6253f7dee9f5b3b17c4f96c084f03a4dd39a\\output\\res\\layout\\design_navigation_item_header.xml"
     },

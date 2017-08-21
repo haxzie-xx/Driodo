@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Aug 21 20:37:44 IST 2017
+#Mon Aug 21 21:17:45 IST 2017
 210.set=ANDROID_RESOURCE
 282.file=F\:\\project\\Driado\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\toast_layout.xml
 14.set=ANDROID_RESOURCE

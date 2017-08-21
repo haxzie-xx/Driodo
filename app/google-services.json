@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1035811678713",
+    "firebase_url": "https://driodo-60310.firebaseio.com",
+    "project_id": "driodo-60310",
+    "storage_bucket": "driodo-60310.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035811678713:android:07ef057065fe8d3a",
+        "android_client_info": {
+          "package_name": "me.haxzie.driodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035811678713-cn9dbme6hq1jh25lefkrilgnqv7usdm0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.haxzie.driodo",
+            "certificate_hash": "ecabfa88e68578a0560890d5fc06e50450785510"
+          }
+        },
+        {
+          "client_id": "1035811678713-mqe8ipadadqhu3rkpv3j8psvs0obf82u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdhovwS_l1_YnLIVZAzunmhIBvQb8iYa4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035811678713-mqe8ipadadqhu3rkpv3j8psvs0obf82u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\09ac66bfae6b5f65bbba58c193e980dfd52055b4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0b47137aff6ac40902a1325c916627fe9a5a813e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\b724f0ec21edac75e763af130fbfdfcbc069c6ef\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f6d9eb298a67d0d9488f7b9bfd0e78e76f6b86b2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\0de2e209bccd2b3f864863cd4f68c50df97b5bef\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0a1ef880c2b99189b7dc7b7046a21560acbd149e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\b76e5af3efb6923097175b369fd40d86714ff148\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="43e9789bd3240271265ab30ce1be9f224843f5a8">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cb169e0142485cb6b9a253f4ed1abf09a7d6f2ef\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_4c05ef252b76750fc1b475b3008c10f7210d34d0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\b82848032df40fef243b5e49f303ccf6a0dea938\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e1625e48a836779b5fa141d22e5d05563aaccc9a">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_28c18bced33d19640a1ef2f9b106c6a8eb2ee303\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\51fb6253f7dee9f5b3b17c4f96c084f03a4dd39a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6a022bf00ccd0948a8180c505e8e458bbddd43a6">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9ea2bcdb5e4ed8c8e3b285e91a0780688f08dae2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\8ad0f3fddd18f8fb7b118b9c8f6a6b00adc6eef0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e176fd06c2ad5b50a2f5cb4de6000a83a7cb48f5">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a1999fc195a2a8ddfa45e5b88df9d83385e56aed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\21e10b638639c775e9c3cf737c3f66b3d6fbb2d5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5734c03faa42bb254d3f05d656f7a7036cb096b6">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0638179d104bb2d010f1c93e03dca512fb8e1ca5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-jre7\1.1.3-2\3fe54c7558c903868351ac79b792d152bca958f2\kotlin-stdlib-jre7-1.1.3-2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3fe54c7558c903868351ac79b792d152bca958f2">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\kotlin-stdlib-jre7-1.1.3-2_186205494cecf7b35bf63ace16108bfcb7374c1e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.1.3-2\9b44c139a4ec57031e0c84ba0e49ba16df6d801c\kotlin-stdlib-1.1.3-2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9b44c139a4ec57031e0c84ba0e49ba16df6d801c">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\kotlin-stdlib-1.1.3-2_ac2cf9a9c5c13336f5b313a6bf44b3f001535fc5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\project\Driado\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6b110c97e6768bec05be45e8a7879346652de4e9">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_0786c71da3024434f3d315e710a4f4938eb993da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\f881a806aef557d902d4c7202e35cf29a42205dd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_441e136fae04b656c5018ec4f3d2b2ee44cc42c9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\de15ef71624d05cf22dbf728ae3b3f4348d3e6be\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4b9bf8df8cbe57dfec3527bbc39d95e4e2550067\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.2.4_313aff129984a0a45e086871ec03bfcc02e7284e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\3f39d0bc7635ccaf5b01dba10854dc2053180040\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c005bed505a731ef2a23d10330fc232329d834b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\59818eaa21cb46435b0f8953e3bf245f177b6cfd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4820554f123edfd34ecb5448efacfac61c7ac770\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\6e1e7f7d23d77b837a1ed47b5bb8140848b4f146\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e5b429c146094a612134910688d169ec08deeefb">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8c755402007d56f3c2e56e940073f65c8720788a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\15edcc554d604c210cbb6798bbcfe6923404de92\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b5b6af36bacf1d812cd3dc45f9dcab9ea471ed91">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_39e00f5aeb7c68dd289ea3938e9e5464e9d826cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\3aa876bcdb6a597a70c5a1755899573c8725c6c4\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_27e9e1f325ac03b0e08431ecb2c6c597a75b943c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\74ea3b2ff649cfd8174a4782cf98875140f31ab9\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="dee40b4a01bb48be9ce0df9b5d17129ba41ccc47">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d2fe616238a57a5c683b24bc710cd2069c3bb792\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\eb7724b5eb9b05f5a5fc4964f7fbc360138d7e8a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c4f45092eee6cdf1a5dbd597b2b6819be652ce2e">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8e6d4c2e10e0baa8843e67858882ff704e09f5b7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\bd67a6faa39531835f9e85849d153ebff82bf3bd\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_734ab32b5dd5ddd0d5658aa18e8ab0b7862c9450\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\933e3dd198c658d048c08f2bda5eb82d7532d373\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5d9285f1903c8ad0693d9d006dbea842e69ac957\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\04744655c96e7ee14acef98b46ad45155e35ede6\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ed87ccdcb70c17d71ba4e6e4ac16afa62d3c49fb">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5e7e7831d6b07f468d0a63d29d69dc50efcf8d65\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\fcdb3f74a7d1da11d00517a8d509698b4b7d261b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_006f28043b6c7c8cbcc88a60b26b5719e8e9b256\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\project\Driado\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_1c8a9629c701bb3881fc60b94261196b4017b9ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_888dc6c70591458ee998c2926f41c5e65a528d54\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\54872958c299c617545b686681e20a787a167bf2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d5d8febebbd93456cd418e0820492effd9ac7039\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\62b8bd91cf07daf43ed9303f609a7e66a8c2da5b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4145fa9e24a9e38d79bb6d059596f4c78d74f9d5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\ffdaa7ade5d9c6ccca9bff9e35b31526452b701c\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="62f733cc92b1611138da965697f4654cd385e078">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d882b6a56a222b015beab58a5f9ca4a2747b8b2c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="919f0dfe192fb4e063e7dacadee7f8bb9a2672a9">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\annotations-13.0_c2efe9f06cb74133c1367c08ba763332942149df\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\User\.android\build-cache\237c40464e3410b6ebb80c656f45c8d11086f77b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="F:\project\Driado\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_7430b3138e2c58eb5fad91d7a3556321942d2ad7\classes.dex" />
+    </item>
+
+</items>

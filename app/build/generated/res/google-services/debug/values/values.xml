@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1035811678713-mqe8ipadadqhu3rkpv3j8psvs0obf82u.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://driodo-60310.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1035811678713</string>
+    <string name="google_api_key" translatable="false">AIzaSyDdhovwS_l1_YnLIVZAzunmhIBvQb8iYa4</string>
+    <string name="google_app_id" translatable="false">1:1035811678713:android:07ef057065fe8d3a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDdhovwS_l1_YnLIVZAzunmhIBvQb8iYa4</string>
+    <string name="google_storage_bucket" translatable="false">driodo-60310.appspot.com</string>
+    <string name="project_id" translatable="false">driodo-60310</string>
+</resources>

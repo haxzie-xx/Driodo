@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Driodo</string>
+    <string name="title_activity_mobile_verf">MobileVerfActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_mobile_verif">MobileVerifActivity</string>
+    <string name="btn_verify">Verify Mobile Number</string>
+    <string name="verify_help_text">We\'ll send you a verifiction sms to your number. It\'ll usually take several minutes. By continuing you accept to our Terms and Conditions and Privacy Policy.</string>
+</resources>

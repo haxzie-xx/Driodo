@@ -13,7 +13,7 @@
         android:label="Tests for me.haxzie.driodo"
         android:targetPackage="me.haxzie.driodo" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 

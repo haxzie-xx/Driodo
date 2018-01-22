@@ -691,8 +691,255 @@
                     "startLine": 38,
                     "startColumn": 4,
                     "startOffset": 4521,
+                    "endColumn": 60,
+                    "endOffset": 4577
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 105,
+                        "endColumn": 60,
+                        "endOffset": 161
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 4582,
+                    "endColumn": 65,
+                    "endOffset": 4643
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 65,
+                        "endOffset": 227
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 4648,
+                    "endColumn": 104,
+                    "endOffset": 4748
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 232,
+                        "endColumn": 104,
+                        "endOffset": 332
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 4753,
+                    "endColumn": 111,
+                    "endOffset": 4860
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 337,
+                        "endColumn": 111,
+                        "endOffset": 444
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 4865,
+                    "endColumn": 78,
+                    "endOffset": 4939
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 449,
+                        "endColumn": 78,
+                        "endOffset": 523
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 4944,
+                    "endColumn": 108,
+                    "endOffset": 5048
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 528,
+                        "endColumn": 108,
+                        "endOffset": 632
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 5053,
+                    "endColumn": 118,
+                    "endOffset": 5167
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 637,
+                        "endColumn": 118,
+                        "endOffset": 751
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 5172,
+                    "endColumn": 112,
+                    "endOffset": 5280
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 756,
+                        "endColumn": 112,
+                        "endOffset": 864
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 5285,
+                    "endColumn": 94,
+                    "endOffset": 5375
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 869,
+                        "endColumn": 94,
+                        "endOffset": 959
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 5380,
+                    "endColumn": 88,
+                    "endOffset": 5464
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 964,
+                        "endColumn": 88,
+                        "endOffset": 1048
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 5469,
+                    "endColumn": 92,
+                    "endOffset": 5557
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1053,
+                        "endColumn": 92,
+                        "endOffset": 1141
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 5562,
+                    "endColumn": 86,
+                    "endOffset": 5644
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1146,
+                        "endColumn": 86,
+                        "endOffset": 1228
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 5649,
+                    "endColumn": 96,
+                    "endOffset": 5741
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-en-rGB\\values-en-rGB.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1233,
+                        "endColumn": 96,
+                        "endOffset": 1325
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 5746,
                     "endColumn": 81,
-                    "endOffset": 4598
+                    "endOffset": 5823
                 },
                 "from": {
                     "file": "C:\\Users\\User\\.android\\build-cache\\3aa876bcdb6a597a70c5a1755899573c8725c6c4\\output\\res\\values-en-rGB\\values-en-rGB.xml",
@@ -707,11 +954,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 4603,
+                    "startOffset": 5828,
                     "endColumn": 100,
-                    "endOffset": 4699
+                    "endOffset": 5924
                 },
                 "from": {
                     "file": "C:\\Users\\User\\.android\\build-cache\\3aa876bcdb6a597a70c5a1755899573c8725c6c4\\output\\res\\values-en-rGB\\values-en-rGB.xml",

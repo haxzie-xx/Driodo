@@ -691,8 +691,255 @@
                     "startLine": 38,
                     "startColumn": 4,
                     "startOffset": 4664,
+                    "endColumn": 60,
+                    "endOffset": 4720
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 105,
+                        "endColumn": 60,
+                        "endOffset": 161
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 4725,
+                    "endColumn": 64,
+                    "endOffset": 4785
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 166,
+                        "endColumn": 64,
+                        "endOffset": 226
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 4790,
+                    "endColumn": 112,
+                    "endOffset": 4898
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 231,
+                        "endColumn": 112,
+                        "endOffset": 339
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 4903,
+                    "endColumn": 111,
+                    "endOffset": 5010
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 344,
+                        "endColumn": 111,
+                        "endOffset": 451
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 5015,
+                    "endColumn": 80,
+                    "endOffset": 5091
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 456,
+                        "endColumn": 80,
+                        "endOffset": 532
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 5096,
+                    "endColumn": 109,
+                    "endOffset": 5201
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 537,
+                        "endColumn": 109,
+                        "endOffset": 642
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 5206,
+                    "endColumn": 125,
+                    "endOffset": 5327
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 647,
+                        "endColumn": 125,
+                        "endOffset": 768
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 5332,
+                    "endColumn": 111,
+                    "endOffset": 5439
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 773,
+                        "endColumn": 111,
+                        "endOffset": 880
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 5444,
+                    "endColumn": 93,
+                    "endOffset": 5533
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 885,
+                        "endColumn": 93,
+                        "endOffset": 974
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 5538,
+                    "endColumn": 89,
+                    "endOffset": 5623
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 979,
+                        "endColumn": 89,
+                        "endOffset": 1064
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 5628,
+                    "endColumn": 91,
+                    "endOffset": 5715
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1069,
+                        "endColumn": 91,
+                        "endOffset": 1156
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 5720,
+                    "endColumn": 86,
+                    "endOffset": 5802
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1161,
+                        "endColumn": 86,
+                        "endOffset": 1243
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 5807,
+                    "endColumn": 98,
+                    "endOffset": 5901
+                },
+                "from": {
+                    "file": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\values-cs\\values-cs.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1248,
+                        "endColumn": 98,
+                        "endOffset": 1342
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 5906,
                     "endColumn": 81,
-                    "endOffset": 4741
+                    "endOffset": 5983
                 },
                 "from": {
                     "file": "C:\\Users\\User\\.android\\build-cache\\3aa876bcdb6a597a70c5a1755899573c8725c6c4\\output\\res\\values-cs\\values-cs.xml",
@@ -707,11 +954,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 4746,
+                    "startOffset": 5988,
                     "endColumn": 100,
-                    "endOffset": 4842
+                    "endOffset": 6084
                 },
                 "from": {
                     "file": "C:\\Users\\User\\.android\\build-cache\\3aa876bcdb6a597a70c5a1755899573c8725c6c4\\output\\res\\values-cs\\values-cs.xml",

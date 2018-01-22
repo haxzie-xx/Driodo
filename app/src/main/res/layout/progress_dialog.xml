@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="30dp"
+    android:layout_margin="16dp"
     android:gravity="center"
     android:background="@drawable/white_round_corner_bg">
     <ProgressBar
@@ -13,6 +15,6 @@
         android:textColor="@color/textBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sending Verification SMS"
+        android:text="Requesting verification..."
         android:layout_marginLeft="20dp"/>
 </LinearLayout>

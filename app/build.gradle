@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.1'
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "me.haxzie.driodo"
         minSdkVersion 21
@@ -12,6 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -26,7 +27,9 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.android.support:multidex:1.0.1'
     compile 'com.google.firebase:firebase-auth:11.0.4'
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
@@ -37,6 +40,11 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.github.GrenderG:Toasty:1.2.5'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'co.infinum:materialdatetimepicker-support:3.2.1'
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    compile 'com.google.android.gms:play-services-location:11.0.4'
+    compile 'com.android.support:appcompat-v7:26.+'
     testCompile 'junit:junit:4.12'
 }
 

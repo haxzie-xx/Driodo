@@ -32,6 +32,10 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\3aa876bcdb6a597a70c5a1755899573c8725c6c4\\output\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
+        "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\anim\\shake_anim.xml",
+        "source": "F:\\project\\Driado\\app\\src\\main\\res\\anim\\shake_anim.xml"
+    },
+    {
         "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\51fb6253f7dee9f5b3b17c4f96c084f03a4dd39a\\output\\res\\anim\\design_snackbar_in.xml"
     },

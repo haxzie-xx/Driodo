@@ -2,5 +2,9 @@
     {
         "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\51fb6253f7dee9f5b3b17c4f96c084f03a4dd39a\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\mdtp_date_picker_dialog.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\layout-sw600dp-v13\\mdtp_date_picker_dialog.xml"
     }
 ]

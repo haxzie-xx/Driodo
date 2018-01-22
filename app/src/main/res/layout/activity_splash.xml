@@ -47,19 +47,32 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_margin="30dp">
-            <Button
-                android:id="@+id/btn_start"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/btn_start"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
                 android:paddingLeft="30dp"
                 android:paddingRight="30dp"
-                android:background="@drawable/gradient_round_rect_button"
-                android:textColor="@color/white"
-                android:text="Get Started"
                 android:layout_margin="10dp"
-                android:elevation="5dp"/>
+                android:background="@drawable/gradient_round_rect_button"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:elevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Get Started"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_forward_black_24dp"
+                    android:tint="@color/white"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
 
         </LinearLayout>
 

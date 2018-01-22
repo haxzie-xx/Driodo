@@ -8,6 +8,10 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\51fb6253f7dee9f5b3b17c4f96c084f03a4dd39a\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
     {
+        "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\mdtp_material_button_selected.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\drawable-v21\\mdtp_material_button_selected.xml"
+    },
+    {
         "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\3aa876bcdb6a597a70c5a1755899573c8725c6c4\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
@@ -22,6 +26,10 @@
     {
         "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
         "source": "C:\\Users\\User\\.android\\build-cache\\3aa876bcdb6a597a70c5a1755899573c8725c6c4\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\mdtp_material_button_background.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\31ca82ef27e2ed4cba50e1990a21a8ba57e99c9f\\output\\res\\drawable-v21\\mdtp_material_button_background.xml"
     },
     {
         "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",

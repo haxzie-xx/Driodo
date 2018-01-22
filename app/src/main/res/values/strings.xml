@@ -5,7 +5,19 @@
     <string name="title_activity_mobile_verif">MobileVerifActivity</string>
     <string name="btn_verify">Verify Mobile Number</string>
     <string name="verify_help_text">We\'ll send you a verifiction sms to your number. It\'ll usually take several minutes. By continuing you accept to our Terms and Conditions and Privacy Policy.</string>
-
+    <string name="welcome_text">Lets get to know about you. We need a little of your details to enhance your in app experience. Please provide accurate details to help us get to you with the best features and services.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- SignUp -->
+    <string name="sign_up">SignUp</string>
+    <string name="sign_up_username_edtxt">Type a cool username</string>
+    <string name="title_activity_home">Driado</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

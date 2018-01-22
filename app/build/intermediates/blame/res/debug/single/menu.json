@@ -1,5 +1,9 @@
 [
     {
+        "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_registration.xml",
+        "source": "F:\\project\\Driado\\app\\src\\main\\res\\menu\\menu_registration.xml"
+    },
+    {
         "merged": "F:\\project\\Driado\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_mobile_verif.xml",
         "source": "F:\\project\\Driado\\app\\src\\main\\res\\menu\\menu_mobile_verif.xml"
     },

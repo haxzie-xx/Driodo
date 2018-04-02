@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 
 import me.haxzie.driodo.Home.Activities.HomeActivity;
 import me.haxzie.driodo.R;
+import me.haxzie.driodo.Registration.Activities.MobileVerifActivity;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SplashActivity extends AppCompatActivity {

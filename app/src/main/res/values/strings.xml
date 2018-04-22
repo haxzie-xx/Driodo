@@ -20,4 +20,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_persistant_driving">PersistantDrivingActivity</string>
+    <string name="title_activity_persistant_map">PersistantTraining</string>
 </resources>

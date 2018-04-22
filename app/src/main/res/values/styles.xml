@@ -8,6 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="SpeedTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <style name="WhiteProgressBar" parent="AppTheme">
         <item name="android:colorAccent">@color/white</item>
         <item name="colorPrimary">@color/white</item>
@@ -21,10 +29,14 @@
     <style name="HomeTheme" parent="AppTheme">
         <item name="colorPrimaryDark">@color/darkWhite</item>
     </style>
+
     <style name="HomeTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="HomeTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
-    </style>
+    <style name="HomeTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"></style>
+
+    <style name="SpeedTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="SpeedTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"></style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
 

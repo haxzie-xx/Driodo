@@ -1,4 +1,0 @@
-#Mon Jan 22 22:55:48 IST 2018
-base.0=F\:\\project\\Driado\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
-path.0=classes.dex
-renamed.0=classes.dex

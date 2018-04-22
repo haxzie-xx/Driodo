@@ -47,7 +47,15 @@
         <activity
             android:name=".Home.Activities.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/HomeTheme"></activity>
+            android:theme="@style/HomeTheme" />
+        <activity android:name=".FreeDriveMode.FreeDriveActivity" />
+        <activity
+            android:name=".DrivingTests.PersistantDrivingActivity"
+            android:label="@string/title_activity_persistant_driving"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DrivingTests.PersistantMapActivity"
+            android:label="@string/title_activity_persistant_map"></activity>
     </application>
 
 </manifest>

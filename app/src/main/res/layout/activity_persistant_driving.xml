@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrivingTests.PersistantDrivingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:theme="@style/SpeedTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/SpeedTheme.PopupOverlay"
+            app:title="Persistant Drive">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/speed_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="40"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:alpha="0.5"
+                    android:text="km/hr"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Speed Limit"
+                android:textColor="@color/textGrey"
+                android:textSize="18sp" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/speed_limitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:bsb_auto_adjust_section_mark="true"
+                app:bsb_progress="40"
+                app:bsb_second_track_color="@color/blue"
+                app:bsb_section_count="10"
+                app:bsb_section_text_position="below_section_mark"
+                app:bsb_show_section_mark="true"
+                app:bsb_show_section_text="true"
+                app:bsb_show_thumb_text="true"
+                app:bsb_thumb_text_size="18sp"
+                app:bsb_touch_to_seek="true" />
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_gps_fixed_black_24dp"
+                        android:tint="@color/textGrey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Waiting for location" />
+
+                    <ImageView
+                        android:id="@+id/ic_tick_1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_done_black_24dp"
+                        android:tint="@color/primaryDark"
+                        android:visibility="gone" />
+
+                    <com.eyalbira.loadingdots.LoadingDots
+                        android:id="@+id/loading_dots1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:LoadingDots_auto_play="true"
+                        app:LoadingDots_dots_color="@color/blue"
+                        app:LoadingDots_dots_size="5dp"
+                        app:LoadingDots_dots_space="10dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.1"
+                    android:background="@color/textGrey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_location_on_black_24dp"
+                        android:tint="@color/textGrey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Requesting your position" />
+
+                    <ImageView
+                        android:id="@+id/ic_tick_2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_done_black_24dp"
+                        android:tint="@color/primaryDark"
+                        android:visibility="gone" />
+
+                    <com.eyalbira.loadingdots.LoadingDots
+                        android:visibility="gone"
+                        android:id="@+id/loading_dots2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:LoadingDots_auto_play="true"
+                        app:LoadingDots_dots_color="@color/blue"
+                        app:LoadingDots_dots_size="5dp"
+                        app:LoadingDots_dots_space="10dp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:alpha="0.1"
+                    android:background="@color/textGrey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/ic_map_black_24dp"
+                        android:tint="@color/textGrey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Creating your route" />
+
+                    <ImageView
+                        android:id="@+id/ic_tick_3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_done_black_24dp"
+                        android:tint="@color/primaryDark"
+                        android:visibility="gone" />
+
+                    <com.eyalbira.loadingdots.LoadingDots
+                        android:visibility="gone"
+                        android:id="@+id/loading_dots3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:LoadingDots_auto_play="true"
+                        app:LoadingDots_dots_color="@color/blue"
+                        app:LoadingDots_dots_size="5dp"
+                        app:LoadingDots_dots_space="10dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:visibility="visible"
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_play_arrow_black_24dp"
+        android:tint="@color/white" />
+
+</android.support.design.widget.CoordinatorLayout>

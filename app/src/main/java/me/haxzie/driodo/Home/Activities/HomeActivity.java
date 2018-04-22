@@ -1,6 +1,7 @@
 package me.haxzie.driodo.Home.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -20,6 +21,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import me.haxzie.driodo.FreeDriveMode.FreeDriveActivity;
 import me.haxzie.driodo.Home.Adapters.HomeFragmentsAdapter;
 import me.haxzie.driodo.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -107,8 +109,7 @@ public class HomeActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Free Drive Mode", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(HomeActivity.this, FreeDriveActivity.class));
             }
         });
 

@@ -29,59 +29,70 @@
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            app:cardCornerRadius="0dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/speed_limit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="40"
-                    android:textSize="50sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:alpha="0.5"
-                    android:text="km/hr"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="Speed Limit"
-                android:textColor="@color/textGrey"
-                android:textSize="18sp" />
-
-            <com.xw.repo.BubbleSeekBar
-                android:id="@+id/speed_limitter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:bsb_auto_adjust_section_mark="true"
-                app:bsb_progress="40"
-                app:bsb_second_track_color="@color/blue"
-                app:bsb_section_count="10"
-                app:bsb_section_text_position="below_section_mark"
-                app:bsb_show_section_mark="true"
-                app:bsb_show_section_text="true"
-                app:bsb_show_thumb_text="true"
-                app:bsb_thumb_text_size="18sp"
-                app:bsb_touch_to_seek="true" />
-        </LinearLayout>
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/speed_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="40"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:alpha="0.5"
+                        android:text="km/hr"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Speed Limit"
+                    android:textColor="@color/textGrey"
+                    android:textSize="18sp" />
+
+                <com.xw.repo.BubbleSeekBar
+                    android:id="@+id/speed_limitter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:bsb_auto_adjust_section_mark="true"
+                    app:bsb_progress="40"
+                    app:bsb_second_track_color="@color/blue"
+                    app:bsb_section_count="10"
+                    app:bsb_section_text_position="below_section_mark"
+                    app:bsb_show_section_mark="true"
+                    app:bsb_show_section_text="true"
+                    app:bsb_show_thumb_text="true"
+                    app:bsb_thumb_text_size="18sp"
+                    app:bsb_touch_to_seek="true" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -230,10 +241,22 @@
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
+
     </LinearLayout>
 
+    <com.eyalbira.loadingdots.LoadingDots
+        android:id="@+id/main_loading_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:LoadingDots_auto_play="true"
+        app:LoadingDots_dots_color="@color/textGrey"
+        app:LoadingDots_dots_size="10dp"
+        app:LoadingDots_dots_space="10dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="30dp"/>
+
     <android.support.design.widget.FloatingActionButton
-        android:visibility="visible"
+        android:visibility="gone"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

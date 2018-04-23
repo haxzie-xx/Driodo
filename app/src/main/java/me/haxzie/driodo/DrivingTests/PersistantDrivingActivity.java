@@ -1,34 +1,38 @@
 package me.haxzie.driodo.DrivingTests;
 
 import android.Manifest;
+import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.util.SparseArray;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 import com.eyalbira.loadingdots.LoadingDots;
 import com.google.android.gms.maps.model.LatLng;
 import com.liuguangqiang.cookie.CookieBar;
 import com.xw.repo.BubbleSeekBar;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
-import java.util.logging.Logger;
 
+import me.haxzie.driodo.FreeDriveMode.FreeDriveActivity;
+import me.haxzie.driodo.MapUtils;
 import me.haxzie.driodo.R;
 
 public class PersistantDrivingActivity extends AppCompatActivity {
@@ -39,7 +43,8 @@ public class PersistantDrivingActivity extends AppCompatActivity {
     private BubbleSeekBar mBubbleSeekbar;
     private TextView speedLimit;
     private int mlimit = 40;
-
+    private Location mCurrentLocation = null;
+    private LatLng mDestinationLocation = null;
     private LoadingDots mLoadingDots[];
     private ImageView mTickMars[];
     private LocationManager mLocationManager;
@@ -50,7 +55,7 @@ public class PersistantDrivingActivity extends AppCompatActivity {
                 Log.d("PERSISTANT_DRIVE", String.format("%f, %f", location.getLatitude(), location.getLongitude()));
                 mLocationManager.removeUpdates(mLocationListener);
             } else {
-                Log.d("PERSISTANT_DRIVE","Location is null");
+                Log.d("PERSISTANT_DRIVE", "Location is null");
             }
         }
 
@@ -76,6 +81,7 @@ public class PersistantDrivingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_persistant_driving);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mLocationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
         mBubbleSeekbar = findViewById(R.id.speed_limitter);
         speedLimit = findViewById(R.id.speed_limit);
@@ -123,18 +129,36 @@ public class PersistantDrivingActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(PersistantDrivingActivity.this, PersistantMapActivity.class);
-                i.putExtra("START_LAT", 12.8653129);
-                i.putExtra("START_LNG", 74.9241649);
-                i.putExtra("END_LAT", 12.8653129);
-                i.putExtra("END_LNG", 74.9241649);
-                startActivity(i);
+
+                if (mCurrentLocation != null && mDestinationLocation != null){
+                    Intent i = new Intent(PersistantDrivingActivity.this, PersistantMapActivity.class);
+                    i.putExtra("START_LAT", mCurrentLocation.getLatitude());
+                    i.putExtra("START_LNG", mCurrentLocation.getLongitude());
+                    i.putExtra("END_LAT", mDestinationLocation.latitude);
+                    i.putExtra("END_LNG", mDestinationLocation.longitude);
+                    startActivity(i);
+                }
+
             }
         });
 
+        startLoadingData();
+
     }
 
-    private void getCurrentLocation() {
+    private void startLoadingData() {
+        boolean isGPSEnabled = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        boolean isNetworkEnabled = mLocationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+
+        if (isGPSEnabled && isNetworkEnabled){
+            loadingCompleted(0);
+            loadingStarted(1);
+
+            getCurrentLocation();
+        }
+    }
+
+    private void getCurrentLocation(){
         boolean isGPSEnabled = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         boolean isNetworkEnabled = mLocationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
@@ -149,13 +173,7 @@ public class PersistantDrivingActivity extends AppCompatActivity {
         else {
             if (isNetworkEnabled) {
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
+
                     return;
                 }
                 mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,
@@ -170,46 +188,76 @@ public class PersistantDrivingActivity extends AppCompatActivity {
             }
         }
         if (location != null) {
-            Log.d("PERSISTANT_DRIVE",String.format("getCurrentLocation(%f, %f)", location.getLatitude(),
+            Log.d("PERSISTANT_DRIVE", String.format("getCurrentLocation(%f, %f)", location.getLatitude(),
                     location.getLongitude()));
+            locationReceived(location);
+
         }
+
     }
 
-    private LatLng getRandomLocation(double x0, double y0, int radius) {
-        Random random = new Random();
+    private void loadingCompleted(int id) {
 
-        // Convert radius from meters to degrees
-        double radiusInDegrees = radius / 111000f;
+        mLoadingDots[id].setVisibility(View.GONE);
+        mTickMars[id].setVisibility(View.VISIBLE);
 
-        double u = random.nextDouble();
-        double v = random.nextDouble();
-        double w = radiusInDegrees * Math.sqrt(u);
-        double t = 2 * Math.PI * v;
-        double x = w * Math.cos(t);
-        double y = w * Math.sin(t);
-
-        // Adjust the x-coordinate for the shrinking of the east-west distances
-        double new_x = x / Math.cos(y0);
-
-        double foundLongitude = new_x + x0;
-        double foundLatitude = y + y0;
-        return new LatLng(foundLatitude, foundLongitude);
     }
 
-    private void setSpeedLimitText(int speed){
-        if (speed <= 20){
+    private void loadingStarted(int id) {
+
+        mLoadingDots[id].setVisibility(View.VISIBLE);
+        mTickMars[id].setVisibility(View.GONE);
+
+    }
+
+    public void locationReceived(Location location){
+        this.mCurrentLocation = location;
+        Log.i("CURRENT_LOCATION", String.format("CurrentLocation(%f, %f)",location.getLatitude(), location.getLongitude()));
+        loadingCompleted(1);
+        loadingStarted(2);
+        this.mDestinationLocation = MapUtils.getRandomLocation(new LatLng(location.getLatitude(), location.getLongitude()), 10000);
+        loadingCompleted(2);
+        viewStartButton();
+
+    }
+
+    private void viewStartButton() {
+        findViewById(R.id.main_loading_dots).setVisibility(View.GONE);
+        findViewById(R.id.fab).setVisibility(View.VISIBLE);
+    }
+    private void setSpeedLimitText(int speed) {
+        if (speed <= 20) {
             mBubbleSeekbar.setThumbColor(getResources().getColor(R.color.textGrey));
             speedLimit.setTextColor(getResources().getColor(R.color.textGrey));
             speedLimit.setText(String.valueOf(speed));
-        }else if(speed <= 60){
+        } else if (speed <= 60) {
             mBubbleSeekbar.setThumbColor(getResources().getColor(R.color.primaryDark));
             speedLimit.setTextColor(getResources().getColor(R.color.primaryDark));
             speedLimit.setText(String.valueOf(speed));
-        }else {
+        } else {
             mBubbleSeekbar.setThumbColor(getResources().getColor(R.color.pink));
             speedLimit.setTextColor(getResources().getColor(R.color.pink));
             speedLimit.setText(String.valueOf(speed));
         }
+    }
+
+    public void showGpsDisabledDialog(){
+
+        new AlertDialog.Builder(this)
+                .setCancelable(false)
+                .setTitle("Enable GPS")
+                .setMessage("Please enable GPS and Location services to use this feature")
+                .setPositiveButton("Enable", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        startActivity(new Intent("android.settings.LOCATION_SOURCE_SETTINGS"));
+                    }
+                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        }).show();
     }
 
 }

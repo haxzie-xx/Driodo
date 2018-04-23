@@ -15,6 +15,7 @@
         android:theme="@style/SpeedTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways"
@@ -33,23 +34,69 @@
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/white_round_rect_button"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:elevation="5dp">
+                <TextView
+                    android:id="@+id/route_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="25km"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_start"
+                android:padding="15dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/gradient_round_rect_button"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:elevation="5dp"
+                android:layout_gravity="right">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_steering"
+                    android:tint="@color/white"/>
+            </LinearLayout>
+
+
+        </FrameLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_start"
+            android:id="@+id/btn_reset"
             android:padding="15dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/gradient_round_rect_button"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/white_round_rect_button"
             android:orientation="horizontal"
             android:gravity="center"
             android:elevation="5dp"
-            android:layout_gravity="bottom|center">
+            android:layout_gravity="right|bottom">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_steering"
-                android:tint="@color/white"/>
+                android:src="@drawable/ic_shuffle_black_24dp"
+                android:tint="@color/blue"/>
         </LinearLayout>
 
     </FrameLayout>

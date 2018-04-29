@@ -1,7 +1,6 @@
 package me.haxzie.driodo.FreeDriveMode;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -25,7 +24,6 @@ import android.text.style.RelativeSizeSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Chronometer;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.eyalbira.loadingdots.LoadingDots;
@@ -34,9 +32,10 @@ import com.liuguangqiang.cookie.CookieBar;
 
 import java.util.Locale;
 
+import me.haxzie.driodo.Data;
+import me.haxzie.driodo.GpsServices;
 import me.haxzie.driodo.R;
-
-import static me.haxzie.driodo.R.raw.over_speed;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class FreeDriveActivity extends AppCompatActivity implements LocationListener, GpsStatus.Listener {
 
@@ -57,6 +56,11 @@ public class FreeDriveActivity extends AppCompatActivity implements LocationList
     private SharedPreferences sharedPreferences;
     private boolean firstfix;
     private MediaPlayer mp;
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

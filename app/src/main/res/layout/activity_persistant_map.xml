@@ -29,12 +29,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <FrameLayout
+            android:id="@+id/start_drive_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom">
@@ -98,6 +100,128 @@
                 android:src="@drawable/ic_shuffle_black_24dp"
                 android:tint="@color/blue"/>
         </LinearLayout>
+
+
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/difficulty_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/white_round_rect_button"
+            android:padding="5dp"
+            android:layout_margin="15dp"
+            android:elevation="5dp">
+            <ProgressBar
+                android:id="@+id/difficulty_progress"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txt_difficulty"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EASY"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@drawable/green_round_rect_button"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:elevation="5dp"/>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/drive_console"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <at.grabner.circleprogress.CircleProgressView
+                        android:id="@+id/speedo_meter"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:padding="10dp"
+                        app:cpv_rimColor="@color/speedTrack"
+                        app:cpv_outerContourColor="@color/transperant"
+                        app:cpv_innerContourColor="@color/transperant"
+                        app:cpv_barColor1="@color/colorPrimary"
+                        app:cpv_barColor2="@color/blue"
+                        app:cpv_barColor3="@color/pink"
+                        app:cpv_showTextInSpinningMode="false"
+                        app:cpv_textColor="@color/transperant"
+                        app:cpv_value="0"/>
+                    <TextView
+                        android:id="@+id/current_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="00"
+                        android:textColor="@color/textGrey"
+                        android:textSize="30sp"/>
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp">
+                    <Chronometer
+                        android:id="@+id/chrono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp"
+                        android:textColor="@color/textGrey"
+                        android:layout_gravity="center"/>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/speedometer"
+                            android:tint="@color/blue"/>
+                        <TextView
+                            android:id="@+id/average_speed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/blue"
+                            android:text="00 km/hr"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/start_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/gradient_round_rect_button"
+                    android:src="@drawable/ic_play_arrow_black_24dp"
+                    android:tint="@color/white"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
 
     </FrameLayout>
 </LinearLayout>

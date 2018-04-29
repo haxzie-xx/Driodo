@@ -1,6 +1,7 @@
 package me.haxzie.driodo;
 
 import android.location.Location;
+import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -13,6 +14,7 @@ public class MapUtils {
 
     public static LatLng getRandomLocation(LatLng point, int radius) {
 
+        Log.i("driodo", "Route radius : "+ radius);
         List<LatLng> randomPoints = new ArrayList<>();
         List<Float> randomDistances = new ArrayList<>();
         Location myLocation = new Location("");

@@ -13,6 +13,7 @@
         android:theme="@style/SpeedTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways"
@@ -27,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="#eeeeee"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.v7.widget.CardView
@@ -45,28 +47,42 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <LinearLayout
+                <FrameLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content">
+                    <at.grabner.circleprogress.CircleProgressView
+                        android:id="@+id/speed_meter"
+                        android:layout_margin="10dp"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        app:cpv_rimWidth="30dp"
+                        app:cpv_barWidth="30dp"
+                        app:cpv_value="30"
+                        app:cpv_barColor="@color/blue"
+                        app:cpv_outerContourColor="@color/transperant"
+                        app:cpv_innerContourColor="@color/transperant"
+                        app:cpv_textColor="@color/transperant"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"/>
 
-                    <TextView
-                        android:id="@+id/speed_limit"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="40"
-                        android:textSize="50sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:alpha="0.5"
-                        android:text="km/hr"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/speed_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="60sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="km/h"/>
+                    </LinearLayout>
+                </FrameLayout>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -75,21 +91,6 @@
                     android:textColor="@color/textGrey"
                     android:textSize="18sp" />
 
-                <com.xw.repo.BubbleSeekBar
-                    android:id="@+id/speed_limitter"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    app:bsb_auto_adjust_section_mark="true"
-                    app:bsb_progress="40"
-                    app:bsb_second_track_color="@color/blue"
-                    app:bsb_section_count="10"
-                    app:bsb_section_text_position="below_section_mark"
-                    app:bsb_show_section_mark="true"
-                    app:bsb_show_section_text="true"
-                    app:bsb_show_thumb_text="true"
-                    app:bsb_thumb_text_size="18sp"
-                    app:bsb_touch_to_seek="true" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -97,166 +98,20 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="25dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            app:contentPadding="15dp">
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="15dp">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginRight="15dp"
-                        android:src="@drawable/ic_gps_fixed_black_24dp"
-                        android:tint="@color/textGrey" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Waiting for location" />
-
-                    <ImageView
-                        android:id="@+id/ic_tick_1"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_done_black_24dp"
-                        android:tint="@color/primaryDark"
-                        android:visibility="gone" />
-
-                    <com.eyalbira.loadingdots.LoadingDots
-                        android:id="@+id/loading_dots1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:LoadingDots_auto_play="true"
-                        app:LoadingDots_dots_color="@color/blue"
-                        app:LoadingDots_dots_size="5dp"
-                        app:LoadingDots_dots_space="10dp" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:alpha="0.1"
-                    android:background="@color/textGrey" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="15dp">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginRight="15dp"
-                        android:src="@drawable/ic_location_on_black_24dp"
-                        android:tint="@color/textGrey" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Requesting your position" />
-
-                    <ImageView
-                        android:id="@+id/ic_tick_2"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_done_black_24dp"
-                        android:tint="@color/primaryDark"
-                        android:visibility="gone" />
-
-                    <com.eyalbira.loadingdots.LoadingDots
-                        android:visibility="gone"
-                        android:id="@+id/loading_dots2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:LoadingDots_auto_play="true"
-                        app:LoadingDots_dots_color="@color/blue"
-                        app:LoadingDots_dots_size="5dp"
-                        app:LoadingDots_dots_space="10dp" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:alpha="0.1"
-                    android:background="@color/textGrey" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="15dp">
-
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_marginRight="15dp"
-                        android:src="@drawable/ic_map_black_24dp"
-                        android:tint="@color/textGrey" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Creating your route" />
-
-                    <ImageView
-                        android:id="@+id/ic_tick_3"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_done_black_24dp"
-                        android:tint="@color/primaryDark"
-                        android:visibility="gone" />
-
-                    <com.eyalbira.loadingdots.LoadingDots
-                        android:visibility="gone"
-                        android:id="@+id/loading_dots3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:LoadingDots_auto_play="true"
-                        app:LoadingDots_dots_color="@color/blue"
-                        app:LoadingDots_dots_size="5dp"
-                        app:LoadingDots_dots_space="10dp" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
+                android:justificationMode="inter_word"
+                android:text="Use the generated map to test your driving skills without exceeding the speedlimit. Your driving records will only be considered once you complete the choosen map."/>
         </android.support.v7.widget.CardView>
+
 
     </LinearLayout>
 
-    <com.eyalbira.loadingdots.LoadingDots
-        android:id="@+id/main_loading_dots"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:LoadingDots_auto_play="true"
-        app:LoadingDots_dots_color="@color/textGrey"
-        app:LoadingDots_dots_size="10dp"
-        app:LoadingDots_dots_space="10dp"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="30dp"/>
 
     <android.support.design.widget.FloatingActionButton
-        android:visibility="gone"
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

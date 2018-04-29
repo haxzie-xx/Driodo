@@ -20,14 +20,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activities.SplashActivity"
-            android:theme="@style/SplashTheme">
+            android:name=".Home.Activities.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/HomeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:theme="@style/SplashTheme"></activity>
         <activity
             android:name=".Registration.Activities.MobileVerifActivity"
             android:label="@string/title_activity_mobile_verif"
@@ -44,10 +48,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".Home.Activities.HomeActivity"
-            android:label="@string/title_activity_home"
-            android:theme="@style/HomeTheme" />
         <activity android:name=".FreeDriveMode.FreeDriveActivity" />
         <activity
             android:name=".DrivingTests.PersistantDrivingActivity"
@@ -55,7 +55,8 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".DrivingTests.PersistantMapActivity"
-            android:label="@string/title_activity_persistant_map"></activity>
+            android:label="@string/title_activity_persistant_map" />
+        <activity android:name=".Activities.AboutUsActivity"></activity>
     </application>
 
 </manifest>

@@ -1,14 +1,12 @@
-package me.haxzie.driodo.FreeDriveMode;
+package me.haxzie.driodo;
 
 import android.Manifest;
-import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.GpsStatus;
-import android.location.GpsStatus.Listener;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -16,10 +14,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
-import android.util.Log;
 
-import me.haxzie.driodo.FreeDriveMode.Data;
-import me.haxzie.driodo.R;
+import me.haxzie.driodo.Data;
+import me.haxzie.driodo.FreeDriveMode.FreeDriveActivity;
 
 public class GpsServices extends Service implements LocationListener, GpsStatus.Listener {
     private LocationManager mLocationManager;

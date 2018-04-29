@@ -47,14 +47,18 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="me.haxzie.driodo.Activities.SplashActivity"
-            android:theme="@style/SplashTheme" >
+            android:name="me.haxzie.driodo.Home.Activities.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/HomeTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="me.haxzie.driodo.Activities.SplashActivity"
+            android:theme="@style/SplashTheme" />
         <activity
             android:name="me.haxzie.driodo.Registration.Activities.MobileVerifActivity"
             android:label="@string/title_activity_mobile_verif"
@@ -71,10 +75,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name="me.haxzie.driodo.Home.Activities.HomeActivity"
-            android:label="@string/title_activity_home"
-            android:theme="@style/HomeTheme" />
         <activity android:name="me.haxzie.driodo.FreeDriveMode.FreeDriveActivity" />
         <activity
             android:name="me.haxzie.driodo.DrivingTests.PersistantDrivingActivity"
@@ -83,6 +83,7 @@
         <activity
             android:name="me.haxzie.driodo.DrivingTests.PersistantMapActivity"
             android:label="@string/title_activity_persistant_map" />
+        <activity android:name="me.haxzie.driodo.Activities.AboutUsActivity" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"

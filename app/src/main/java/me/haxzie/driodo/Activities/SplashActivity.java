@@ -27,12 +27,13 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         context = SplashActivity.this;
-        btn_start = (LinearLayout) findViewById(R.id.btn_start);
+        btn_start =  findViewById(R.id.btn_start);
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(context, MobileVerifActivity.class));
-                startActivity(new Intent(context, HomeActivity.class));
+                startActivity(new Intent(context, MobileVerifActivity.class)
+                                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+//                startActivity(new Intent(context, HomeActivity.class));
             }
         });
     }

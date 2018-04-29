@@ -2,6 +2,7 @@ package me.haxzie.driodo.Registration.Activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,11 +29,12 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MobileVerifActivity extends AppCompatActivity {
 
-    String TAG = "driodo";
-    AppCompatDialog compatDialog;
-    Fragment fragment;
-    Class fragmentClass;
-    TextView dialogMsg;
+    private String TAG = "driodo";
+    private AppCompatDialog compatDialog;
+    private Fragment fragment;
+    private Class fragmentClass;
+    private TextView dialogMsg;
+    private String phoneNumber;
 
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
@@ -44,7 +46,11 @@ public class MobileVerifActivity extends AppCompatActivity {
             // 2 - Auto-retrieval. On some devices Google Play services can automatically
             //     detect the incoming verification SMS and perform verificaiton without
             //     user action.
-            Log.d(TAG, "onVerificationCompleted:" + credential);
+            Log.d(TAG, "onVerificationCompleted:" + credential.getProvider());
+            SharedPreferences pref = getSharedPreferences("USER", MODE_PRIVATE);
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putString("PHONE", phoneNumber);
+            editor.commit();
             attemptLogin();
 //            signInWithPhoneAuthCredential(credential);
         }
@@ -117,13 +123,6 @@ public class MobileVerifActivity extends AppCompatActivity {
 
         fragmentManager.beginTransaction().replace(R.id.content, fragment).commit();
 
-
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-
-
-
     }
 
     /**
@@ -132,6 +131,9 @@ public class MobileVerifActivity extends AppCompatActivity {
      * @param phoneNumber
      */
     public void sendVerification(String phoneNumber) {
+
+        this.phoneNumber = phoneNumber;
+
         if (isNetworkAvailable()) {
             compatDialog.show();
             PhoneAuthProvider.getInstance().verifyPhoneNumber(
@@ -161,7 +163,7 @@ public class MobileVerifActivity extends AppCompatActivity {
     public void attemptLogin() {
 
 //        dialogMsg.setText("Setting up account");
-//        startActivity(new Intent(this, HomeActivity.class));
+        startActivity(new Intent(this, HomeActivity.class));
 
     }
 

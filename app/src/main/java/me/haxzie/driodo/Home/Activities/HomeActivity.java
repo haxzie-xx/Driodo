@@ -2,6 +2,8 @@ package me.haxzie.driodo.Home.Activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
@@ -21,6 +23,10 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import com.liuguangqiang.cookie.CookieBar;
+
+import me.haxzie.driodo.Activities.AboutUsActivity;
+import me.haxzie.driodo.Activities.SplashActivity;
 import me.haxzie.driodo.FreeDriveMode.FreeDriveActivity;
 import me.haxzie.driodo.Home.Adapters.HomeFragmentsAdapter;
 import me.haxzie.driodo.R;
@@ -37,6 +43,34 @@ public class HomeActivity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private HomeFragmentsAdapter mHomeFragmentAdapter;
+    private FloatingActionButton fab;
+    boolean doubleBackToExitPressedOnce = false;
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        new CookieBar.Builder(this)
+                .setTitle("Sure to Exit?")
+                .setMessage("Press back again to exit")
+                .setTitleColor(R.color.white)
+                .setMessageColor(R.color.white)
+                .setIcon(R.drawable.ic_exit_to_app_white_24dp)
+                .show();
+
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+    }
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -46,6 +80,27 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
+    public void showFab(boolean toShow){
+        if(toShow) fab.show();
+        else fab.hide();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //Check if the user is logged in
+        //if not, the clear the activity stack ad open the splash activity
+        SharedPreferences prefs = getSharedPreferences("USER", MODE_PRIVATE);
+        String phoneNumber = prefs.getString("PHONE", null);
+        if (phoneNumber == null){
+            Intent intent = new Intent(this, SplashActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        }
     }
 
 
@@ -73,12 +128,15 @@ public class HomeActivity extends AppCompatActivity {
                 switch (tab.getPosition()){
                     case 0:
                         tab.setIcon(R.drawable.ic_home_selected);
+                        showFab(true);
                         break;
                     case 1:
                         tab.setIcon(R.drawable.ic_dashboard_selected);
+                        showFab(false);
                         break;
                     case 2:
                         tab.setIcon(R.drawable.ic_avatar_selected);
+                        showFab(false);
                         break;
                 }
             }
@@ -105,7 +163,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,6 +172,8 @@ public class HomeActivity extends AppCompatActivity {
         });
 
     }
+
+
 
 
     @Override
@@ -131,8 +191,12 @@ public class HomeActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_about) {
+            startActivity(new Intent(this, AboutUsActivity.class));
+        }
+
+        if (id == R.id.action_share){
+
         }
 
         return super.onOptionsItemSelected(item);

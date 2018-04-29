@@ -1,7 +1,9 @@
 package me.haxzie.driodo;
 
+import android.arch.persistence.room.Room;
 import android.support.multidex.MultiDexApplication;
 
+import me.haxzie.driodo.DBEngine.RoomDB;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
@@ -9,6 +11,9 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
  */
 
 public class Driodo extends MultiDexApplication {
+
+    private static RoomDB mydb;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -18,4 +23,5 @@ public class Driodo extends MultiDexApplication {
                 .build()
         );
     }
+
 }

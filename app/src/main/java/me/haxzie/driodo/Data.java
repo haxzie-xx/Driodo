@@ -1,4 +1,4 @@
-package me.haxzie.driodo.FreeDriveMode;
+package me.haxzie.driodo;
 
 /**
  * Created by fly on 17/04/15.

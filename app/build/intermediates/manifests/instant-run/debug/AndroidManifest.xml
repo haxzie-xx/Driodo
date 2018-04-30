@@ -84,6 +84,9 @@
             android:name="me.haxzie.driodo.DrivingTests.PersistantMapActivity"
             android:label="@string/title_activity_persistant_map" />
         <activity android:name="me.haxzie.driodo.Activities.AboutUsActivity" />
+        <activity
+            android:name="me.haxzie.driodo.DrivingTests.SpeedControlMapActivity"
+            android:label="@string/title_activity_speed_control_map" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"

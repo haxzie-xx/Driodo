@@ -119,6 +119,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
     private int speedLimit, routeRadius;
     private Route route;
     private int avg_speed;
+    private boolean isAlertEnabled;
 
     @Override
     protected void onStart() {
@@ -126,9 +127,9 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
         SharedPreferences prefs = getSharedPreferences("SETTINGS", MODE_PRIVATE);
         speedLimit = prefs.getInt("SPEED_LIMIT", 50);
         routeRadius = prefs.getInt("ROUTE_RADIUS", 10);
+        isAlertEnabled = prefs.getBoolean("IS_ALERT_ENABLED", true);
         initializeSpeedoMeter();
         this.ctx = this;
-
     }
 
     @Override
@@ -191,7 +192,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
         randomizeRouteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                end_dest = MapUtils.getRandomLocation(start_dest, routeRadius*1000);
+                end_dest = MapUtils.getRandomLocation(start_dest, routeRadius * 1000);
                 startRoute();
             }
         });
@@ -394,7 +395,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
             @Override
             public void onClick(View view) {
 
-                if (!data.isRunning()) {
+                if (!isDriving) {
                     isDriving = true;
                     startTest.setImageDrawable(getResources().getDrawable(R.drawable.ic_pause_black_24dp));
                     data.setRunning(true);
@@ -509,7 +510,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
     public void onRoutingSuccess(ArrayList<Route> route, int shortestRouteIndex) {
         if (route != null)
             this.route = route.get(0);
-        else{
+        else {
             new CookieBar.Builder(this)
                     .setTitle("Aww Snap!")
                     .setMessage("Something went wrong")
@@ -615,11 +616,14 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.relocate) {
-            CameraPosition cameraPosition = new CameraPosition.Builder()
-                    .target(relocateLocation)
-                    .zoom(15).build();
-            //Zoom in and animate the camera.
-            mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+            if (relocateLocation != null) {
+                CameraPosition cameraPosition = new CameraPosition.Builder()
+                        .target(relocateLocation)
+                        .zoom(15).build();
+                //Zoom in and animate the camera.
+                mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+            }
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -637,7 +641,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
 
     private void setCurrentLocation(Location location) {
         this.start_dest = new LatLng(location.getLatitude(), location.getLongitude());
-        this.end_dest = MapUtils.getRandomLocation(start_dest, routeRadius*1000);
+        this.end_dest = MapUtils.getRandomLocation(start_dest, routeRadius * 1000);
     }
 
     @Override
@@ -664,11 +668,11 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
                         relocateEndLocation.latitude, relocateEndLocation.longitude, results);
                 if (results[0] <= 10.0f) {
                     onStartLine = false;
-                    showCompletedDialog(route, (int)data.getAverageSpeed(), (int)routeDistance);
+                    showCompletedDialog(route, (int) data.getAverageSpeed(), (int) routeDistance);
 
                 }
 
-            } else if (!onStartLine){
+            } else if (!onStartLine) {
                 float[] results = new float[1];
                 Location.distanceBetween(location.getLatitude(), location.getLongitude(),
                         relocateLocation.latitude, relocateLocation.longitude, results);
@@ -706,15 +710,19 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
     }
 
     public void showOverSpeedDialog() {
-        new CookieBar.Builder(this)
-                .setTitle("OverSpeed Alert!")
-                .setTitleColor(R.color.white)
-                .setMessage("You are moving too fast, slow Down...")
-                .setMessageColor(R.color.white)
-                .setBackgroundColor(R.color.pink)
-                .setIcon(R.drawable.ic_error_outline_white_24dp)
-                .show();
-        mp.start();
+
+        if (isAlertEnabled) {
+            new CookieBar.Builder(this)
+                    .setTitle("OverSpeed Alert!")
+                    .setTitleColor(R.color.white)
+                    .setMessage("You are moving too fast, slow Down...")
+                    .setMessageColor(R.color.white)
+                    .setBackgroundColor(R.color.pink)
+                    .setIcon(R.drawable.ic_error_outline_white_24dp)
+                    .show();
+            mp.start();
+        } else return;
+
     }
 
     // slide the view from below itself to the current position
@@ -732,31 +740,30 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
 
     // slide the view from its current position to below itself
     public void slideDown(final View view) {
-//        TranslateAnimation animate = new TranslateAnimation(
-//                0,                 // fromXDelta
-//                0,                 // toXDelta
-//                0,                 // fromYDelta
-//                view.getHeight() + 50); // toYDelta
-//        animate.setDuration(500);
-//        animate.setAnimationListener(new Animation.AnimationListener() {
-//            @Override
-//            public void onAnimationStart(Animation animation) {
-//
-//            }
-//
-//            @Override
-//            public void onAnimationEnd(Animation animation) {
-//                view.setVisibility(View.GONE);
-//            }
-//
-//            @Override
-//            public void onAnimationRepeat(Animation animation) {
-//
-//            }
-//        });
-//        animate.setFillAfter(true);
-//        view.startAnimation(animate);
+        TranslateAnimation animate = new TranslateAnimation(
+                0,                 // fromXDelta
+                0,                 // toXDelta
+                0,                 // fromYDelta
+                view.getHeight() + 50); // toYDelta
+        animate.setDuration(500);
+        animate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                view.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        animate.setFillAfter(true);
+        view.startAnimation(animate);
         view.setVisibility(View.GONE);
     }
 
@@ -787,7 +794,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
         dialog.findViewById(R.id.save_exit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new InsertDBAsync(ctx, RoomDB.getInstance(ctx), sRoute, avg_speed, wayDistance ).execute();
+                new InsertDBAsync(ctx, RoomDB.getInstance(ctx), "Persistent Drive", speedLimit, sRoute, avg_speed, wayDistance).execute();
                 finish();
             }
         });

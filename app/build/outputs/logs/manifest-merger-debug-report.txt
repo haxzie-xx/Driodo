@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\28d8f6545b042a46c72057e2f192eb96\AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\bb1b7665f165adc6de85a37d1c9cfbba\AndroidManifest.xml:16:1-19:12
 MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\d1d6684c4136ca7d8ff8711d92b76124\AndroidManifest.xml:16:1-21:12
@@ -45,20 +45,20 @@ MERGED from [android.arch.persistence:db-framework:1.0.0] C:\Users\User\.gradle\
 MERGED from [android.arch.persistence:db:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\db-1.0.0.aar\9f231d13d95d6c68bba3dfeb6f74ebd8\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.core:runtime:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\37411ed34b4cb594be31f0e24b94e55e\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\b60d4b652c14cefbc8afdeda95a2b80f\AndroidManifest.xml:17:1-30:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
 	package
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:11-69
@@ -83,7 +83,7 @@ MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\User\.gradle\cach
 	android:name
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:12:22-76
 application
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:14:5-60:19
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:14:5-63:19
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\28d8f6545b042a46c72057e2f192eb96\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\28d8f6545b042a46c72057e2f192eb96\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\d1d6684c4136ca7d8ff8711d92b76124\AndroidManifest.xml:19:5-20:19
@@ -185,7 +185,7 @@ ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:29:17-77
 	android:name
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:29:27-74
 activity#me.haxzie.driodo.Activities.SplashActivity
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:32:9-34:59
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:32:9-34:50
 	android:theme
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:34:13-47
 	android:name
@@ -223,9 +223,15 @@ ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:56:9-58:69
 	android:name
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:57:13-63
 activity#me.haxzie.driodo.Activities.AboutUsActivity
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:59:9-73
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:59:9-64
 	android:name
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:59:19-61
+activity#me.haxzie.driodo.DrivingTests.SpeedControlMapActivity
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:60:9-62:81
+	android:label
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:62:13-69
+	android:name
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:61:13-65
 uses-sdk
 INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml

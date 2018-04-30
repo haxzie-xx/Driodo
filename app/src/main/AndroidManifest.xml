@@ -31,7 +31,7 @@
         </activity>
         <activity
             android:name=".Activities.SplashActivity"
-            android:theme="@style/SplashTheme"></activity>
+            android:theme="@style/SplashTheme" />
         <activity
             android:name=".Registration.Activities.MobileVerifActivity"
             android:label="@string/title_activity_mobile_verif"
@@ -56,7 +56,10 @@
         <activity
             android:name=".DrivingTests.PersistantMapActivity"
             android:label="@string/title_activity_persistant_map" />
-        <activity android:name=".Activities.AboutUsActivity"></activity>
+        <activity android:name=".Activities.AboutUsActivity" />
+        <activity
+            android:name=".DrivingTests.SpeedControlMapActivity"
+            android:label="@string/title_activity_speed_control_map"></activity>
     </application>
 
 </manifest>

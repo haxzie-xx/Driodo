@@ -56,11 +56,22 @@ public class FreeDriveActivity extends AppCompatActivity implements LocationList
     private SharedPreferences sharedPreferences;
     private boolean firstfix;
     private MediaPlayer mp;
+
+    private int speedLimit;
+    private boolean isAlertEnabled;
+
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        SharedPreferences prefs = getSharedPreferences("SETTINGS", MODE_PRIVATE);
+        speedLimit = prefs.getInt("SPEED_LIMIT", 50);
+        isAlertEnabled = prefs.getBoolean("IS_ALERT_ENABLED", true);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -317,7 +328,7 @@ public class FreeDriveActivity extends AppCompatActivity implements LocationList
         if (location.hasSpeed()) {
             showLoading(false);
             String speed = String.format(Locale.ENGLISH, "%.0f", location.getSpeed() * 3.6);
-            if (location.getSpeed()*3.6 > 50){
+            if (location.getSpeed()*3.6 > speedLimit){
                 showOverSpeedDialog();
             }
             SpannableString s = new SpannableString(speed);
@@ -337,15 +348,19 @@ public class FreeDriveActivity extends AppCompatActivity implements LocationList
     }
 
     public void showOverSpeedDialog(){
-        new CookieBar.Builder(FreeDriveActivity.this)
-                .setTitle("OverSpeed Alert!")
-                .setTitleColor(R.color.white)
-                .setMessage("You are moving too fast, slow Down...")
-                .setMessageColor(R.color.white)
-                .setBackgroundColor(R.color.pink)
-                .setIcon(R.drawable.ic_error_outline_white_24dp)
-                .show();
-        mp.start();
+
+        if (isAlertEnabled){
+            new CookieBar.Builder(FreeDriveActivity.this)
+                    .setTitle("OverSpeed Alert!")
+                    .setTitleColor(R.color.white)
+                    .setMessage("You are moving too fast, slow Down...")
+                    .setMessageColor(R.color.white)
+                    .setBackgroundColor(R.color.pink)
+                    .setIcon(R.drawable.ic_error_outline_white_24dp)
+                    .show();
+            mp.start();
+        }
+
     }
     @Override
     public void onStatusChanged(String s, int i, Bundle bundle) {

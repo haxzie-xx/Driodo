@@ -22,4 +22,5 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_persistant_driving">PersistantDrivingActivity</string>
     <string name="title_activity_persistant_map">PersistantTraining</string>
+    <string name="title_activity_speed_control_map">Map</string>
 </resources>

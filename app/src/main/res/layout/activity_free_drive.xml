@@ -258,7 +258,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="30dp"
-                            android:text="25"
+                            android:text="0"
                             android:textSize="24sp"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -271,7 +271,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="7dp"
-                            android:text="25"
+                            android:text="0"
                             android:textSize="24sp"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -284,7 +284,7 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
+        android:layout_gravity="bottom|center"
         android:layout_margin="16dp"
         android:src="@drawable/ic_play_arrow_black_24dp"
         android:tint="@color/white"/>

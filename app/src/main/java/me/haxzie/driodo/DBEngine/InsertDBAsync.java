@@ -10,13 +10,14 @@ import java.util.Calendar;
 public class InsertDBAsync extends AsyncTask<Void, Void, Void> {
     private Context ctx;
     private RoomDB roomdb;
-    private String date, route;
-    private int avg_speed, distance;
+    private String date, route, type;
+    private int avg_speed, distance, limit;
 
-    public InsertDBAsync(Context ctx, RoomDB roomdb, String route, int avg_speed, int distance) {
+    public InsertDBAsync(Context ctx, RoomDB roomdb, String type, int limit, String route, int avg_speed, int distance) {
         this.ctx = ctx;
         this.roomdb = roomdb;
-        this.date = date;
+        this.type = type;
+        this.limit = limit;
         this.route = route;
         this.avg_speed = avg_speed;
         this.distance = distance;
@@ -27,7 +28,7 @@ public class InsertDBAsync extends AsyncTask<Void, Void, Void> {
     @Override
     protected Void doInBackground(Void... voids) {
 
-        DRoute routeToAdd = new DRoute(date, avg_speed, distance, route);
+        DRoute routeToAdd = new DRoute(type, date, avg_speed, distance, limit, route);
         roomdb.routeDAO().insert(routeToAdd);
         return null;
     }

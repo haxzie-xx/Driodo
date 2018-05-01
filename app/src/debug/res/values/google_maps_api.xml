@@ -9,10 +9,10 @@
     You can also add your credentials to an existing key, using these values:
 
     Package name:
-    EC:AB:FA:88:E6:85:78:A0:56:08:90:D5:FC:06:E5:04:50:78:55:10
+    
 
     SHA-1 certificate fingerprint:
-    EC:AB:FA:88:E6:85:78:A0:56:08:90:D5:FC:06:E5:04:50:78:55:10
+    
 
     Alternatively, follow the directions here:
     https://developers.google.com/maps/documentation/android/start#get-key
@@ -21,6 +21,6 @@
     string in this file.
     -->
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
-        AIzaSyCbC7zZ_k5xTmHjCujWYNtgq1k9rLKxFcw
+        ADD YOUR API KEY HERE
     </string>
 </resources>

@@ -1,12 +1,11 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\28d8f6545b042a46c72057e2f192eb96\AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\bb1b7665f165adc6de85a37d1c9cfbba\AndroidManifest.xml:16:1-19:12
-MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\d1d6684c4136ca7d8ff8711d92b76124\AndroidManifest.xml:16:1-21:12
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\7d864f5b4ccfa116bb8849b5daf3deaa\AndroidManifest.xml:2:1-13:12
 MERGED from [co.infinum:materialdatetimepicker-support:3.2.1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\materialdatetimepicker-support-3.2.1.aar\b41fd30a50f807e6316e879e47e9f2eb\AndroidManifest.xml:17:1-30:12
 MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\play-services-location-11.0.4.aar\03417f8cc540349dea0863f80734c1b1\AndroidManifest.xml:2:1-5:12
@@ -19,7 +18,6 @@ MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\User\.gradle\cach
 MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\65c37d1ef388ff79a3ecd8a056f33c21\AndroidManifest.xml:2:1-8:12
 MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\28c47c71bc600db4b2c2ed654c2f69be\AndroidManifest.xml:2:1-5:12
 MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\ad9cb3fef693df86d19e6f12fd64c2bd\AndroidManifest.xml:16:1-23:12
-MERGED from [com.github.GrenderG:Toasty:1.2.5] C:\Users\User\.gradle\caches\transforms-1\files-1.1\Toasty-1.2.5.aar\9496891772de37b15ff4ee51fd48a192\AndroidManifest.xml:2:1-12:12
 MERGED from [com.liuguangqiang.cookie:library:0.3] C:\Users\User\.gradle\caches\transforms-1\files-1.1\library-0.3.aar\f193d5230780244ad19bb05584396197\AndroidManifest.xml:2:1-17:12
 MERGED from [com.eyalbira.loadingdots:loading-dots:1.0.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\loading-dots-1.0.2.aar\0eda3670bfeeb2e2703d33522064ad75\AndroidManifest.xml:2:1-14:12
 MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\design-26.0.0-alpha1.aar\3abe19be7299caa05d69e3ab137e44af\AndroidManifest.xml:17:1-31:12
@@ -29,11 +27,9 @@ MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\User\.gradle
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5794c0f24de0e60481cee806e525f28d\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.0.0-alpha1.aar\fc7674221d995f618256601e25066d2f\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-alpha1.aar\9c3ef9e513f2525610bd62bbc77a783b\AndroidManifest.xml:17:1-26:12
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\16475c6ff71165c5ddb847d55da2d7ae\AndroidManifest.xml:2:1-11:12
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\74cf227d859ebe7fe4561387b060008e\AndroidManifest.xml:2:1-11:12
-MERGED from [com.xw.repo:bubbleseekbar:3.16-lite] C:\Users\User\.gradle\caches\transforms-1\files-1.1\bubbleseekbar-3.16-lite.aar\2571f6e37ff970eea91e5fbda2292f2b\AndroidManifest.xml:2:1-14:12
 MERGED from [com.github.jakob-grabner:Circle-Progress-View:v1.3] C:\Users\User\.gradle\caches\transforms-1\files-1.1\Circle-Progress-View-v1.3.aar\016bea32b24b8ee62f258d94bc6b4aeb\AndroidManifest.xml:2:1-14:12
 MERGED from [android.arch.persistence.room:runtime:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3bddbae29abee749dab338fb83e61ccc\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\1da736afa4823cf0f83c0751df93b719\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\c1150c8d49100df4cb1a9ad9e32a8d4d\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\92116ee3a68d94425ec460d0492b16b2\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\5584dac9dc252c19d5ff7188f1ede540\AndroidManifest.xml:17:1-31:12
@@ -45,20 +41,20 @@ MERGED from [android.arch.persistence:db-framework:1.0.0] C:\Users\User\.gradle\
 MERGED from [android.arch.persistence:db:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\db-1.0.0.aar\9f231d13d95d6c68bba3dfeb6f74ebd8\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.core:runtime:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\37411ed34b4cb594be31f0e24b94e55e\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\b60d4b652c14cefbc8afdeda95a2b80f\AndroidManifest.xml:17:1-30:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
-INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
 	package
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:3:5-31
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-65:12
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:1-62:12
 		INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:2:11-69
@@ -83,11 +79,9 @@ MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\User\.gradle\cach
 	android:name
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:12:22-76
 application
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:14:5-63:19
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:14:5-60:19
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\28d8f6545b042a46c72057e2f192eb96\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\28d8f6545b042a46c72057e2f192eb96\AndroidManifest.xml:5:5-20
-MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\d1d6684c4136ca7d8ff8711d92b76124\AndroidManifest.xml:19:5-20:19
-MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\d1d6684c4136ca7d8ff8711d92b76124\AndroidManifest.xml:19:5-20:19
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\7d864f5b4ccfa116bb8849b5daf3deaa\AndroidManifest.xml:11:5-20
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\7d864f5b4ccfa116bb8849b5daf3deaa\AndroidManifest.xml:11:5-20
 MERGED from [co.infinum:materialdatetimepicker-support:3.2.1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\materialdatetimepicker-support-3.2.1.aar\b41fd30a50f807e6316e879e47e9f2eb\AndroidManifest.xml:28:5-20
@@ -128,14 +122,10 @@ MERGED from [com.android.support:support-v4:26.1.0] C:\Users\User\.gradle\caches
 MERGED from [com.android.support:support-v4:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5794c0f24de0e60481cee806e525f28d\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.0.0-alpha1.aar\fc7674221d995f618256601e25066d2f\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.0.0-alpha1.aar\fc7674221d995f618256601e25066d2f\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\16475c6ff71165c5ddb847d55da2d7ae\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\16475c6ff71165c5ddb847d55da2d7ae\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\74cf227d859ebe7fe4561387b060008e\AndroidManifest.xml:9:5-20
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\74cf227d859ebe7fe4561387b060008e\AndroidManifest.xml:9:5-20
-MERGED from [com.xw.repo:bubbleseekbar:3.16-lite] C:\Users\User\.gradle\caches\transforms-1\files-1.1\bubbleseekbar-3.16-lite.aar\2571f6e37ff970eea91e5fbda2292f2b\AndroidManifest.xml:12:5-20
-MERGED from [com.xw.repo:bubbleseekbar:3.16-lite] C:\Users\User\.gradle\caches\transforms-1\files-1.1\bubbleseekbar-3.16-lite.aar\2571f6e37ff970eea91e5fbda2292f2b\AndroidManifest.xml:12:5-20
 MERGED from [com.github.jakob-grabner:Circle-Progress-View:v1.3] C:\Users\User\.gradle\caches\transforms-1\files-1.1\Circle-Progress-View-v1.3.aar\016bea32b24b8ee62f258d94bc6b4aeb\AndroidManifest.xml:12:5-20
 MERGED from [com.github.jakob-grabner:Circle-Progress-View:v1.3] C:\Users\User\.gradle\caches\transforms-1\files-1.1\Circle-Progress-View-v1.3.aar\016bea32b24b8ee62f258d94bc6b4aeb\AndroidManifest.xml:12:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\1da736afa4823cf0f83c0751df93b719\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\1da736afa4823cf0f83c0751df93b719\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\c1150c8d49100df4cb1a9ad9e32a8d4d\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\c1150c8d49100df4cb1a9ad9e32a8d4d\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\92116ee3a68d94425ec460d0492b16b2\AndroidManifest.xml:22:5-26:19
@@ -184,54 +174,48 @@ category#android.intent.category.LAUNCHER
 ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:29:17-77
 	android:name
 		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:29:27-74
-activity#me.haxzie.driodo.Activities.SplashActivity
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:32:9-34:50
-	android:theme
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:34:13-47
-	android:name
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:33:13-54
 activity#me.haxzie.driodo.Registration.Activities.MobileVerifActivity
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:35:9-38:47
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:32:9-35:47
 	android:label
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:37:13-64
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:34:13-64
 	android:theme
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:38:13-44
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:35:13-44
 	android:name
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:36:13-72
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:33:13-72
 meta-data#com.google.android.geo.API_KEY
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:47:9-49:55
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:44:9-46:55
 	android:value
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:49:13-52
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:46:13-52
 	android:name
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:48:13-58
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:45:13-58
 activity#me.haxzie.driodo.FreeDriveMode.FreeDriveActivity
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:51:9-69
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:48:9-69
 	android:name
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:51:19-66
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:48:19-66
 activity#me.haxzie.driodo.DrivingTests.PersistantDrivingActivity
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:52:9-55:47
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:49:9-52:47
 	android:label
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:54:13-70
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:51:13-70
 	android:theme
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:55:13-44
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:52:13-44
 	android:name
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:53:13-67
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:50:13-67
 activity#me.haxzie.driodo.DrivingTests.PersistantMapActivity
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:56:9-58:69
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:53:9-55:69
 	android:label
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:58:13-66
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:55:13-66
 	android:name
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:57:13-63
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:54:13-63
 activity#me.haxzie.driodo.Activities.AboutUsActivity
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:59:9-64
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:56:9-64
 	android:name
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:59:19-61
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:56:19-61
 activity#me.haxzie.driodo.DrivingTests.SpeedControlMapActivity
-ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:60:9-62:81
+ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:57:9-59:81
 	android:label
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:62:13-69
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:59:13-69
 	android:name
-		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:61:13-65
+		ADDED from F:\project\Driado\app\src\main\AndroidManifest.xml:58:13-65
 uses-sdk
 INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\project\Driado\app\src\main\AndroidManifest.xml
@@ -240,8 +224,6 @@ MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\User\.gradle\cac
 MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\28d8f6545b042a46c72057e2f192eb96\AndroidManifest.xml:4:5-43
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\bb1b7665f165adc6de85a37d1c9cfbba\AndroidManifest.xml:18:5-42
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\multidex-1.0.1.aar\bb1b7665f165adc6de85a37d1c9cfbba\AndroidManifest.xml:18:5-42
-MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\d1d6684c4136ca7d8ff8711d92b76124\AndroidManifest.xml:17:5-43
-MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\d1d6684c4136ca7d8ff8711d92b76124\AndroidManifest.xml:17:5-43
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\7d864f5b4ccfa116bb8849b5daf3deaa\AndroidManifest.xml:7:5-9:41
 MERGED from [uk.co.chrisjenx:calligraphy:2.3.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\calligraphy-2.3.0.aar\7d864f5b4ccfa116bb8849b5daf3deaa\AndroidManifest.xml:7:5-9:41
 MERGED from [co.infinum:materialdatetimepicker-support:3.2.1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\materialdatetimepicker-support-3.2.1.aar\b41fd30a50f807e6316e879e47e9f2eb\AndroidManifest.xml:22:5-24:41
@@ -266,8 +248,6 @@ MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\User\.g
 MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\28c47c71bc600db4b2c2ed654c2f69be\AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\ad9cb3fef693df86d19e6f12fd64c2bd\AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\User\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\ad9cb3fef693df86d19e6f12fd64c2bd\AndroidManifest.xml:17:5-43
-MERGED from [com.github.GrenderG:Toasty:1.2.5] C:\Users\User\.gradle\caches\transforms-1\files-1.1\Toasty-1.2.5.aar\9496891772de37b15ff4ee51fd48a192\AndroidManifest.xml:8:5-10:41
-MERGED from [com.github.GrenderG:Toasty:1.2.5] C:\Users\User\.gradle\caches\transforms-1\files-1.1\Toasty-1.2.5.aar\9496891772de37b15ff4ee51fd48a192\AndroidManifest.xml:8:5-10:41
 MERGED from [com.liuguangqiang.cookie:library:0.3] C:\Users\User\.gradle\caches\transforms-1\files-1.1\library-0.3.aar\f193d5230780244ad19bb05584396197\AndroidManifest.xml:7:5-9:41
 MERGED from [com.liuguangqiang.cookie:library:0.3] C:\Users\User\.gradle\caches\transforms-1\files-1.1\library-0.3.aar\f193d5230780244ad19bb05584396197\AndroidManifest.xml:7:5-9:41
 MERGED from [com.eyalbira.loadingdots:loading-dots:1.0.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\loading-dots-1.0.2.aar\0eda3670bfeeb2e2703d33522064ad75\AndroidManifest.xml:7:5-9:41
@@ -286,16 +266,12 @@ MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\User\.gradl
 MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.0.0-alpha1.aar\fc7674221d995f618256601e25066d2f\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-alpha1.aar\9c3ef9e513f2525610bd62bbc77a783b\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\User\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.0.0-alpha1.aar\9c3ef9e513f2525610bd62bbc77a783b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\16475c6ff71165c5ddb847d55da2d7ae\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\16475c6ff71165c5ddb847d55da2d7ae\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\74cf227d859ebe7fe4561387b060008e\AndroidManifest.xml:5:5-7:41
-MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\74cf227d859ebe7fe4561387b060008e\AndroidManifest.xml:5:5-7:41
-MERGED from [com.xw.repo:bubbleseekbar:3.16-lite] C:\Users\User\.gradle\caches\transforms-1\files-1.1\bubbleseekbar-3.16-lite.aar\2571f6e37ff970eea91e5fbda2292f2b\AndroidManifest.xml:8:5-10:41
-MERGED from [com.xw.repo:bubbleseekbar:3.16-lite] C:\Users\User\.gradle\caches\transforms-1\files-1.1\bubbleseekbar-3.16-lite.aar\2571f6e37ff970eea91e5fbda2292f2b\AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.jakob-grabner:Circle-Progress-View:v1.3] C:\Users\User\.gradle\caches\transforms-1\files-1.1\Circle-Progress-View-v1.3.aar\016bea32b24b8ee62f258d94bc6b4aeb\AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.jakob-grabner:Circle-Progress-View:v1.3] C:\Users\User\.gradle\caches\transforms-1\files-1.1\Circle-Progress-View-v1.3.aar\016bea32b24b8ee62f258d94bc6b4aeb\AndroidManifest.xml:8:5-10:41
 MERGED from [android.arch.persistence.room:runtime:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3bddbae29abee749dab338fb83e61ccc\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.persistence.room:runtime:1.0.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\3bddbae29abee749dab338fb83e61ccc\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\1da736afa4823cf0f83c0751df93b719\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\1da736afa4823cf0f83c0751df93b719\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\c1150c8d49100df4cb1a9ad9e32a8d4d\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\c1150c8d49100df4cb1a9ad9e32a8d4d\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\User\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\92116ee3a68d94425ec460d0492b16b2\AndroidManifest.xml:20:5-44

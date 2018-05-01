@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -71,6 +72,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import at.grabner.circleprogress.CircleProgressView;
 import me.haxzie.driodo.DBEngine.InsertDBAsync;
 import me.haxzie.driodo.DBEngine.RoomDB;
 import me.haxzie.driodo.Data;
@@ -78,6 +80,9 @@ import me.haxzie.driodo.GpsServices;
 import me.haxzie.driodo.MapUtils;
 import me.haxzie.driodo.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
+import static me.haxzie.driodo.MapUtils.bitmapDescriptorFromVector;
+import static me.haxzie.driodo.MapUtils.getRandomLocation;
 
 public class PersistantMapActivity extends AppCompatActivity implements OnMapReadyCallback, RoutingListener, LocationListener, GpsStatus.Listener {
 
@@ -99,9 +104,9 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
     private Chronometer time;
     private TextView currentSpeed;
     private ImageButton startTest;
-    private at.grabner.circleprogress.CircleProgressView speedoMeter;
+    private CircleProgressView speedoMeter;
     private boolean firstfix;
-    private LinearLayout btnStart;
+    private FloatingActionButton btnStart;
     private FrameLayout startDriveLayout;
     private CardView drivingConsole;
     private FrameLayout difficultyLayout;
@@ -115,7 +120,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
     //test
     private JSONArray dataArray;
     private LatLng relocateEndLocation;
-
+    private FrameLayout routeLoader;
     private int speedLimit, routeRadius;
     private Route route;
     private int avg_speed;
@@ -187,13 +192,19 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
         drivingConsole = findViewById(R.id.drive_console);
         difficultyLayout = findViewById(R.id.difficulty_layout);
         txtDifficulty = findViewById(R.id.txt_difficulty);
-
+        routeLoader = findViewById(R.id.route_loader);
 
         randomizeRouteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                end_dest = MapUtils.getRandomLocation(start_dest, routeRadius * 1000);
-                startRoute();
+                if (relocateLocation != null) {
+                    start_dest = relocateLocation;
+                    end_dest = getRandomLocation(start_dest, routeRadius * 1000);
+                    startRoute();
+                } else if (start_dest != null) {
+                    end_dest = getRandomLocation(start_dest, routeRadius * 1000);
+                    startRoute();
+                }
             }
         });
 
@@ -203,7 +214,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
                 randomizeRouteBtn.setVisibility(View.GONE);
                 difficultyLayout.setVisibility(View.GONE);
                 txtDifficulty.setVisibility(View.GONE);
-                slideUp(drivingConsole);
+                slideDown(drivingConsole);
                 drivingConsole.setVisibility(View.VISIBLE);
                 isOnDrivingMode = true;
             }
@@ -270,7 +281,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
                         public void onClick(DialogInterface dialogInterface, int i) {
                             isDriving = false;
                             isOnDrivingMode = false;
-                            slideDown(drivingConsole);
+                            slideUp(drivingConsole);
                             randomizeRouteBtn.setVisibility(View.VISIBLE);
                             startDriveLayout.setVisibility(View.VISIBLE);
                             resetData();
@@ -281,7 +292,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
         } else if (isOnDrivingMode) {
             isOnDrivingMode = false;
             isDriving = false;
-            slideDown(drivingConsole);
+            slideUp(drivingConsole);
             randomizeRouteBtn.setVisibility(View.VISIBLE);
             startDriveLayout.setVisibility(View.VISIBLE);
             resetData();
@@ -481,29 +492,17 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
         routing.execute();
     }
 
-    private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {
-        Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorResId);
-        vectorDrawable.setBounds(0, 0, vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight());
-        Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        vectorDrawable.draw(canvas);
-        return BitmapDescriptorFactory.fromBitmap(bitmap);
-    }
+
 
     @Override
     public void onRoutingFailure(RouteException e) {
         e.printStackTrace();
+        showRouteLoading(false);
     }
 
     @Override
     public void onRoutingStart() {
-        new CookieBar.Builder(this)
-                .setTitle("Routing")
-                .setMessage("Creating the route..")
-                .setTitleColor(R.color.white)
-                .setMessageColor(R.color.white)
-                .setBackgroundColor(R.color.primaryDark)
-                .show();
+        showRouteLoading(true);
     }
 
     @Override
@@ -521,14 +520,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
             return;
         }
 
-        new CookieBar.Builder(this)
-                .setTitle("Routing Success!")
-                .setMessage("Your Route is ready")
-                .setTitleColor(R.color.white)
-                .setMessageColor(R.color.white)
-                .setBackgroundColor(R.color.primaryDark)
-                .setIcon(R.drawable.ic_check_white_48dp)
-                .show();
+        showRouteLoading(false);
 
         CameraUpdate center = CameraUpdateFactory.newLatLng(start_dest);
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
@@ -570,6 +562,8 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
         wayDistance = route.get(0).getDistanceValue();
         wayTime = route.get(0).getDurationValue();
 
+        showMapDifficulty(MapUtils.getMapDifficulty(wayPoints, wayDistance, wayTime));
+
 
         //change the relocate location to start point and endingpoint
         relocateLocation = routePoints.get(0);
@@ -594,9 +588,46 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
 
     }
 
+    private void showMapDifficulty(int mapDifficulty) {
+
+        String title = "", message = "";
+
+        CookieBar.Builder cb = new CookieBar.Builder(this);
+        switch (mapDifficulty){
+            case 1:
+                cb.setBackgroundColor(R.color.primaryDark);
+                title = "Easy Route";
+                message = "This route has been predicted to be easy to drive";
+                break;
+            case 2:
+                cb.setBackgroundColor(R.color.blue);
+                title = "Medium Route";
+                message = "This route has been predicted to be Medium difficulty to drive";
+                break;
+            case 3:
+                cb.setBackgroundColor(R.color.pink);
+                title = "Hard Route";
+                message = "This route has been predicted to be hard to drive";
+                break;
+        }
+        cb.setTitle(title)
+                .setMessage(message)
+                .setTitleColor(R.color.white)
+                .setMessageColor(R.color.white)
+                .show();
+    }
+
+    private void showRouteLoading(boolean toShow) {
+        if (toShow){
+            routeLoader.setVisibility(View.VISIBLE);
+        }else {
+            routeLoader.setVisibility(View.GONE);
+        }
+    }
+
     @Override
     public void onRoutingCancelled() {
-
+        showRouteLoading(false);
     }
 
     @Override
@@ -706,6 +737,7 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
             SpannableString s = new SpannableString(speed);
             s.setSpan(new RelativeSizeSpan(0.25f), s.length(), s.length(), 0);
             currentSpeed.setText(s);
+            speedoMeter.setValue((float) (location.getSpeed() * 3.6 % 100));
         }
     }
 
@@ -727,44 +759,46 @@ public class PersistantMapActivity extends AppCompatActivity implements OnMapRea
 
     // slide the view from below itself to the current position
     public void slideUp(View view) {
-        view.setVisibility(View.VISIBLE);
-        TranslateAnimation animate = new TranslateAnimation(
-                0,                 // fromXDelta
-                0,                 // toXDelta
-                view.getHeight(),  // fromYDelta
-                0);                // toYDelta
-        animate.setDuration(500);
-        animate.setFillAfter(true);
-        view.startAnimation(animate);
+//        TranslateAnimation animate = new TranslateAnimation(
+//                0,                 // fromXDelta
+//                0,                 // toXDelta
+//                view.getHeight(),  // fromYDelta
+//                0);                // toYDelta
+//        animate.setDuration(500);
+//        animate.setFillAfter(true);
+//        view.startAnimation(animate);
+        view.setVisibility(View.GONE);
+        btnStart.show();
     }
 
     // slide the view from its current position to below itself
     public void slideDown(final View view) {
-        TranslateAnimation animate = new TranslateAnimation(
-                0,                 // fromXDelta
-                0,                 // toXDelta
-                0,                 // fromYDelta
-                view.getHeight() + 50); // toYDelta
-        animate.setDuration(500);
-        animate.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                view.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-        animate.setFillAfter(true);
-        view.startAnimation(animate);
-        view.setVisibility(View.GONE);
+//        TranslateAnimation animate = new TranslateAnimation(
+//                0,                 // fromXDelta
+//                0,                 // toXDelta
+//                0,                 // fromYDelta
+//                view.getHeight() + 50); // toYDelta
+//        animate.setDuration(500);
+//        animate.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//                view.setVisibility(View.GONE);
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//
+//            }
+//        });
+//        animate.setFillAfter(true);
+//        view.startAnimation(animate);
+        view.setVisibility(View.VISIBLE);
+        btnStart.hide();
     }
 
     @Override

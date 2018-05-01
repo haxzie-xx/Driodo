@@ -57,9 +57,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="me.haxzie.driodo.Activities.SplashActivity"
-            android:theme="@style/SplashTheme" />
-        <activity
             android:name="me.haxzie.driodo.Registration.Activities.MobileVerifActivity"
             android:label="@string/title_activity_mobile_verif"
             android:theme="@style/AppTheme" />

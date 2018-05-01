@@ -1,5 +1,7 @@
 *.iml
+*.jks
 .gradle
+google_maps_api.xml
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries

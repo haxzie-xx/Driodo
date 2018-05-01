@@ -8,17 +8,17 @@ package android.support.v7.cardview;
 
 public final class R {
     public static final class attr {
-        public static final int cardBackgroundColor = 0x7f030080;
-        public static final int cardCornerRadius = 0x7f030081;
-        public static final int cardElevation = 0x7f030082;
-        public static final int cardMaxElevation = 0x7f030083;
-        public static final int cardPreventCornerOverlap = 0x7f030084;
-        public static final int cardUseCompatPadding = 0x7f030085;
-        public static final int contentPadding = 0x7f0300a8;
-        public static final int contentPaddingBottom = 0x7f0300a9;
-        public static final int contentPaddingLeft = 0x7f0300aa;
-        public static final int contentPaddingRight = 0x7f0300ab;
-        public static final int contentPaddingTop = 0x7f0300ac;
+        public static final int cardBackgroundColor = 0x7f030060;
+        public static final int cardCornerRadius = 0x7f030061;
+        public static final int cardElevation = 0x7f030062;
+        public static final int cardMaxElevation = 0x7f030063;
+        public static final int cardPreventCornerOverlap = 0x7f030064;
+        public static final int cardUseCompatPadding = 0x7f030065;
+        public static final int contentPadding = 0x7f030087;
+        public static final int contentPaddingBottom = 0x7f030088;
+        public static final int contentPaddingLeft = 0x7f030089;
+        public static final int contentPaddingRight = 0x7f03008a;
+        public static final int contentPaddingTop = 0x7f03008b;
     }
     public static final class color {
         public static final int cardview_dark_background = 0x7f050027;
@@ -38,7 +38,7 @@ public final class R {
         public static final int CardView_Light = 0x7f0f00ac;
     }
     public static final class styleable {
-        public static final int[] CardView = { 0x0101013f, 0x01010140, 0x7f030080, 0x7f030081, 0x7f030082, 0x7f030083, 0x7f030084, 0x7f030085, 0x7f0300a8, 0x7f0300a9, 0x7f0300aa, 0x7f0300ab, 0x7f0300ac };
+        public static final int[] CardView = { 0x0101013f, 0x01010140, 0x7f030060, 0x7f030061, 0x7f030062, 0x7f030063, 0x7f030064, 0x7f030065, 0x7f030087, 0x7f030088, 0x7f030089, 0x7f03008a, 0x7f03008b };
         public static final int CardView_android_minWidth = 0;
         public static final int CardView_android_minHeight = 1;
         public static final int CardView_cardBackgroundColor = 2;

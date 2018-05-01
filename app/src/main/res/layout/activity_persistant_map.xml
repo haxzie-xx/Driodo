@@ -61,45 +61,55 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/white_round_rect_button"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:elevation="5dp">
-                <TextView
-                    android:id="@+id/route_distance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:text="0 km"/>
-            </LinearLayout>
-            <LinearLayout
+            <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_start"
-                android:padding="15dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/gradient_round_rect_button"
-                android:orientation="horizontal"
+                android:src="@drawable/ic_steering_wheel"
+                android:tint="@color/white"
                 android:gravity="center"
                 android:elevation="5dp"
                 android:layout_gravity="right">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_steering"
-                    android:tint="@color/white"/>
-            </LinearLayout>
+            </android.support.design.widget.FloatingActionButton>
 
 
         </FrameLayout>
+
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/route_loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@drawable/white_circle"
+            android:elevation="5dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center_horizontal">
+            <ProgressBar
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/white_round_rect_button"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp">
+            <TextView
+                android:id="@+id/route_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="0 km"/>
+        </LinearLayout>
 
 
         <FrameLayout
@@ -142,8 +152,8 @@
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="10dp"
+            android:layout_gravity="top"
+            android:layout_margin="0dp"
             app:cardBackgroundColor="@color/white">
             <LinearLayout
                 android:layout_width="match_parent"

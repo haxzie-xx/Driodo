@@ -7,16 +7,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.AppCompatSeekBar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
-
-import com.xw.repo.BubbleSeekBar;
 
 import me.haxzie.driodo.R;
 
@@ -29,10 +27,11 @@ public class ProfileFragment extends Fragment {
     private boolean isSpeedAlertEnabled;
     private int speedLimit;
     private int routeRadius;
+    private LinearLayout logout;
 
 
-    private TextView alertStatus, txtSpeedLimit, txtPhoneNumber, txtRouteRadius;
-    private AppCompatSeekBar sbSpeedLimit, sbRouteRadius;
+    private TextView alertStatus, txtSpeedLimit, txtPhoneNumber, txtRouteRadius, txtDefensiveThreshold;
+    private AppCompatSeekBar sbSpeedLimit, sbRouteRadius, sbDefensiveThreshold;
     private Switch alertSwitch;
     private SharedPreferences.Editor editor;
 
@@ -40,6 +39,8 @@ public class ProfileFragment extends Fragment {
     private String APP_SETTINGS = "SETTINGS";
     private String SPEED_LIMIT = "SPEED_LIMIT";
     private String ROUTE_RADIUS = "ROUTE_RADIUS";
+    private String THRESHOLD = "THRESHOLD";
+    private int threshold;
 
     @Override
     public void onStart() {
@@ -85,24 +86,21 @@ public class ProfileFragment extends Fragment {
 
         alertSwitch = view.findViewById(R.id.overspeed_switch);
         alertStatus = view.findViewById(R.id.overspeed_status);
-        txtPhoneNumber = view.findViewById(R.id.phone_number);
         txtSpeedLimit = view.findViewById(R.id.speed_limit);
         sbSpeedLimit = view.findViewById(R.id.speed_limit_seek);
         sbRouteRadius = view.findViewById(R.id.route_radius_seek);
         txtRouteRadius = view.findViewById(R.id.route_radius);
+        txtDefensiveThreshold = view.findViewById(R.id.defensive_threshold);
+        sbDefensiveThreshold = view.findViewById(R.id.defensive_threshold_seek);
 
-        SharedPreferences prefs = getContext().getSharedPreferences("USER", Context.MODE_PRIVATE);
-        phoneNumber = prefs.getString("PHONE", null);
+        SharedPreferences prefs = getContext().getSharedPreferences("SETTINGS", Context.MODE_PRIVATE);
         prefs = getContext().getSharedPreferences(APP_SETTINGS, Context.MODE_PRIVATE);
         isSpeedAlertEnabled = prefs.getBoolean(IS_ALERT_ENABLED, true);
         speedLimit = prefs.getInt(SPEED_LIMIT, 50);
         routeRadius = prefs.getInt(ROUTE_RADIUS, 10);
+        threshold = prefs.getInt(THRESHOLD, 12);
 
-        Log.i("driodo", "p: "+phoneNumber+" alert: "+isSpeedAlertEnabled+" sl: "+speedLimit+" rr: "+routeRadius);
 
-
-        //set phone number
-        txtPhoneNumber.setText(phoneNumber);
 
         //set the speed alert status
         alertSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -155,6 +153,26 @@ public class ProfileFragment extends Fragment {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 txtRouteRadius.setText((int)(i/1.5) + " km");
                 editor.putInt(ROUTE_RADIUS, (int)(i/1.5)).commit();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        txtDefensiveThreshold.setText(String.valueOf(threshold)+" km/h");
+        sbDefensiveThreshold.setProgress((threshold*4));
+        sbDefensiveThreshold.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                txtDefensiveThreshold.setText(String.valueOf(i/4) + " km/h");
+                editor.putInt(THRESHOLD, i/4).commit();
             }
 
             @Override

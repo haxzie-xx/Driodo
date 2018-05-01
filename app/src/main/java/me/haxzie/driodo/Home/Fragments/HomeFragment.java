@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import me.haxzie.driodo.DrivingTests.PersistantDrivingActivity;
+import me.haxzie.driodo.DrivingTests.SpeedControlMapActivity;
 import me.haxzie.driodo.R;
 
 /**
@@ -22,7 +23,7 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private LinearLayout persistantTest;
+    private LinearLayout persistantTest, speedTest;
 
     public static HomeFragment newInstance(){
         return new HomeFragment();
@@ -34,6 +35,13 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home2, container, false);
         persistantTest = v.findViewById(R.id.persistant_test);
+        speedTest = v.findViewById(R.id.speed_test);
+        speedTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), SpeedControlMapActivity.class));
+            }
+        });
         persistantTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
